@@ -1,0 +1,32 @@
+2018-12-16 15:47:43.253 ERROR[restartedMain]o.s.boot.diagnostics.LoggingFailureAnalysisReporter.report:42 -
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method mongoDbFactory in org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration required a bean of type 'com.mongodb.MongoClient' that could not be found.
+	- Bean method 'mongo' not loaded because auto-configuration 'MongoAutoConfiguration' was excluded
+
+
+Action:
+
+Consider revisiting the conditions above or defining a bean of type 'com.mongodb.MongoClient' in your configuration.
+
+2018-12-16 15:49:29.768 ERROR[restartedMain]o.s.boot.diagnostics.LoggingFailureAnalysisReporter.report:42 -
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of method mongoDbFactory in org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration required a bean of type 'com.mongodb.MongoClient' that could not be found.
+	- Bean method 'mongo' not loaded because auto-configuration 'MongoAutoConfiguration' was excluded
+
+
+Action:
+
+Consider revisiting the conditions above or defining a bean of type 'com.mongodb.MongoClient' in your configuration.
+
