@@ -18,7 +18,39 @@
                     <target>1.6</target>
                 </configuration>
             </plugin>
-            <!--testng打jar包运行的插件引入-->
+            <plugin>
+                <!--testng打jar包运行的插件引入-->
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>
+                        <!--启动类入口-->
+                        com.dwd.www.Application
+                    </mainClass>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <!--重新制定JDK为1.8以及编码格式-->
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                    <compilerArguments>
+                        <extdirs>
+                            <!--制定打的jar包地址-->
+                            ${project.basedir}/lib
+                        </extdirs>
+                    </compilerArguments>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 
@@ -130,12 +162,6 @@
             <artifactId>extentreports</artifactId>
             <version>3.0.6</version>
         </dependency>
-
-        <!--解决mongo报错的依赖-->
-        <!--<dependency>-->
-            <!--<groupId>org.springframework.boot</groupId>-->
-            <!--<artifactId>spring-boot-starter-data-mongodb</artifactId>-->
-        <!--</dependency>-->
     </dependencies>
 
 
